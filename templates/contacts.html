@@ -1,5 +1,14 @@
-{% block contacts %}
-<table>
+{% extends "layout.html" %} 
+
+{% block content %}
+
+<form action="/contacts" method="get" class="p-4">
+  <label for="search">Search Term</label>
+  <input id="search" type="search" name="q" value="" />
+  <input type="submit" value="Search" />
+</form>
+
+<table class="w-full mb-3">
   <thead>
     <tr>
       <th>First</th>
@@ -22,6 +31,11 @@
       </td>
     </tr>
     {% endfor %}
-  </tbody>
+   </tbody>
 </table>
+
+  <p>
+    <a href="/contacts/new">Add Contact</a>
+  </p>
+
 {% endblock %}

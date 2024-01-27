@@ -5,11 +5,20 @@
   <title>Contact App - Rust + HTMX</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="public/styles.css" rel="stylesheet">
 </head>
 
-<body>
-  {% block content %} {% endblock %}
+<body class="bg-gray-100 m-2">
+  <main class="p-4">
+    <header>
+      <div class="text-black border-b border-white">
+        <h1>Contacts App - Rust + HTMX</h1>
+        <h3>A Demo Contact Application</h3>
+      </div>
+    </header>
+
+    {% block content %} {% endblock %}
+  </main>
 </body>
 
 </html>
